@@ -29,7 +29,7 @@ void ADC_setup(int adcNumber){
     set(ADMUX, REFS0);
     clear(ADMUX, REFS1);
 
-    //step 2: set the ADC clock prescaler to 128
+    //step 2: set the ADC clock prescaler to 128. 16M/128=125kHz
     ADCSRA = (ADPS2 << 1) | (ADPS1 << 1) | (ADPS0 << 1);
 
     //step 3: disable digital 
